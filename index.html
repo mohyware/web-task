@@ -3,17 +3,68 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Note App</title>
+    <title>Preview</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
+<style>
+    body {
+        background-color: #c3c4ef;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 70px;
+        /* Push content below nav bar */
+    }
+
+    .content h1 {
+        font-size: 3.5em;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .content p {
+        font-size: 1.5em;
+        margin-bottom: 40px;
+        max-width: 600px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    }
+
+    .content button {
+        padding: 10px 30px;
+        font-size: 1.2em;
+        font-weight: bold;
+        background-color: #5457b6;
+        /* Pinkish-purple button */
+        border: none;
+        border-radius: 25px;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin: 10px;
+    }
+
+    .content button:hover {
+        background-color: #a4a5e4;
+    }
+</style>
 
 <body>
-    <div class="Home">
-        <a href="home.html">
-            <button class="button">Home</button>
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Welcome to Note Taker</h1>
+        <p>Easily organize, manage, and track your notes with our intuitive platform. Start creating now!</p>
+        <button class="button">Register Now</button>
+        <a href="./home.html">
+            <button class="button">login</button>
         </a>
     </div>
 </body>
