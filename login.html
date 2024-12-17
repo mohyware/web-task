@@ -86,29 +86,33 @@
 
 <body>
     <center>
-        <table>
-            <tr>
-                <th colspan="2">
-                    <h1>Login Page</h1>
-                </th>
-            </tr>
-            <tr>
-                <th><label for="mal">Email:</label></th>
-                <td><input type="email" id="mal" required placeholder="jison@gmail.com"></td>
-            </tr>
-            <tr>
-                <th><label for="upass">User Password:</label></th>
-                <td><input type="password" required id="upass"></td>
-            </tr>
-            <tr>
-                <td colspan="2" style="text-align: center;">
-                    <br><button type="submit">Sign in</button><br><br>
-                    <a href="password.html">Forgot Your password?</a><br>
-                    <p>Don't Have An Account? <a href="register.html">Sign Up</a></p>
-                </td>
-            </tr>
-        </table>
+        <form id="loginForm">
+            <table>
+                <tr>
+                    <th colspan="2">
+                        <h1>Login Page</h1>
+                    </th>
+                </tr>
+                <tr>
+                    <th><label for="mal">Email:</label></th>
+                    <td><input type="email" id="loginMail" required placeholder="jison@gmail.com"></td>
+                </tr>
+                <tr>
+                    <th><label for="upass">User Password:</label></th>
+                    <td><input type="password" required id="loginPassword"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <br><button type="submit">Sign in</button><br><br>
+                        <a href="password.html">Forgot Your password?</a><br>
+                        <p>Don't Have An Account? <a href="register.html">Sign Up</a></p>
+                    </td>
+                </tr>
+            </table>
+        </form>
     </center>
 </body>
+<script src="./scripts/login.js">
+</script>
 
 </html>

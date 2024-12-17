@@ -93,55 +93,53 @@
 
 <body>
     <center>
-        <table>
-            <tr>
-                <th colspan="2">
-                    <h1>Sign Up Page</h1>
-                </th>
-            </tr>
-            <tr>
-                <th><label for="fullnam">Full Name:</label></th>
-                <td><input type="text" id="fullnam" required></td>
-            </tr>
-            <tr>
-                <th><label for="email">Email:</label></th>
-                <td><input type="email" id="email" required placeholder="jison@gmail.com"></td>
-            </tr>
-            <tr>
-                <th><label for="Phone">Phone:</label></th>
-                <td><input type="tel" required id="Phone"></td>
-            </tr>
-            <tr>
-                <th><label for="Date">Date:</label></th>
-                <td><input type="date" id="Date"></td>
-            </tr>
-            <tr>
-                <th><label for="gender">Gender:</label></th>
-                <td style="color: #fff">
-                    <input type="radio" name="gender" value="male"> Male
-                    <input type="radio" name="gender" value="female"> Female
-                </td>
-            </tr>
-            <tr>
-                <th><label for="password">Password:</label></th>
-                <td><input type="password" required id="password"></td>
-            </tr>
-            <tr>
-                <th><label for="cpass">Confirm Password:</label></th>
-                <td><input type="password" required id="cpass"></td>
-            </tr>
-            <tr>
-                <td colspan="2" style="text-align: center;">
-                    <button type="submit">Sign Up</button>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" style="text-align: center;">
-                    <p>Already Have An Account? <a href="login.html">Sign In</a></p>
-                </td>
-            </tr>
-        </table>
+        <form id="signupForm">
+            <table>
+                <tr>
+                    <th colspan="2">
+                        <h1>Sign Up Page</h1>
+                    </th>
+                </tr>
+                <tr>
+                    <th><label for="fullnam">Full Name:</label></th>
+                    <td><input type="text" id="fullnam" name="fullname" required></td>
+                </tr>
+                <tr>
+                    <th><label for="email">Email:</label></th>
+                    <td><input type="email" id="email" name="email" required placeholder="jison@gmail.com"></td>
+                </tr>
+                <tr>
+                    <th><label for="Phone">Phone:</label></th>
+                    <td><input type="tel" id="Phone" name="phone" required></td>
+                </tr>
+                <tr>
+                    <th><label for="gender">Gender:</label></th>
+                    <td style="color: #fff">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="password">Password:</label></th>
+                    <td><input type="password" id="password" name="password" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button type="submit">Sign Up</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <p>Already Have An Account? <a href="login.html">Sign In</a></p>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
     </center>
 </body>
+<script src="./scripts/register.js"></script>
 
 </html>
