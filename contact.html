@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Note Taker</label>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./home.html">Notes</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a class="active" href="./contact.html">Contact Us</a></li>
+            <li><a href="./index.html">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="Home">
+        <h1>Contact Us</h1>
+        <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+            <label for="email">Your Email:</label>
+            <br>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            <label for="message">Your Message:</label>
+            <br>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <br><br>
+            <button class="button" type="submit">Send Email</button>
+        </form>
+    </div>
+</body>
+<script src="main.js"></script>
+
+</html>
