@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* Purple background */
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 50px auto;
+            background-color: #5457b6;
+            /* Yellow background */
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border: 5px solid #c3c4ef;
+            /* Purple border */
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #5457b6;
+            /* Purple background */
+            color: #fff;
+            /* Yellow text */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            /* White background */
+        }
+
+        input[type="radio"] {
+            margin: 0 10px;
+        }
+
+        button {
+            background-color: #800080;
+            /* Purple background */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #732673;
+            /* Darker purple */
+        }
+
+        a {
+            color: #800080;
+            /* Purple text */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        label {
+            color: #fff;
+        }
+
+        p {
+            color: #fff;
+        }
+    </style>
+    <link rel="stylesheet" href="navbar.css">
+
+</head>
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Note Taker</label>
+    <ul>
+        <li><a href="./index.html">Preview</a></li>
+        <li><a href="./home.html">Notes</a></li>
+        <li><a href="./profile.html">Profile</a></li>
+        <li><a class="active" href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+    </ul>
+</nav>
+
+<body>
+    <center>
+        <form id="profieForm">
+            <table>
+                <tr>
+                    <th colspan="2">
+                        <h1>Profile Page</h1>
+                    </th>
+                </tr>
+                <tr>
+                    <th><label for="fullnam">Full Name:</label></th>
+                    <td><input type="text" id="fullnam" name="fullname" required value="" readonly></td>
+                </tr>
+                <tr>
+                    <th><label for="email">Email:</label></th>
+                    <td><input type="email" id="email" name="email" required placeholder="jison@gmail.com" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="Phone">Phone:</label></th>
+                    <td><input type="tel" id="Phone" name="phone" required readonly></td>
+                </tr>
+                <tr>
+                    <th><label for="gender">Gender:</label></th>
+                    <td style="color: #fff">
+                        <label id="genderVal"></label>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </center>
+</body>
+<script src="./scripts/profile.js"></script>
+
+</html>
