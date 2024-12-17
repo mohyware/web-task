@@ -1,7 +1,9 @@
 let form = document.getElementById("form");
 let input = document.getElementById("input");
 let msg = document.getElementById("msg");
+
 let posts = JSON.parse(localStorage.getItem("posts")) || [];
+const currentUser = JSON.parse(localStorage.getItem("current_user"));
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -23,7 +25,7 @@ let savePosts = () => {
 
 let acceptData = () => {
   const createdAt = new Date(); // Add timestamp for the new post
-  const post = { text: input.value, createdAt };
+  const post = { text: input.value, createdAt, user: currentUser.email };
   posts.push(post); // Add new post to the array
   input.value = ""; // Clear input field
   savePosts();
@@ -31,20 +33,23 @@ let acceptData = () => {
 };
 
 let showPosts = () => {
+  console.log("posts", posts);
   const postsDOM = document.getElementById("posts");
   postsDOM.innerHTML = ""; // Clear previous posts
   posts.forEach((post, index) => {
-    const postDOM = document.createElement("div");
-    postDOM.className = `post id-${index}`;
-    postDOM.innerHTML = `
+    if (post.user === currentUser.email) {
+      const postDOM = document.createElement("div");
+      postDOM.className = `post id-${index}`;
+      postDOM.innerHTML = `
       <p>${post.text}</p>
       <span class="options">
       <span>${timeAgo(post.createdAt)}</span>
       <i onClick="editPost(${index})" class="fas fa-edit"></i>
       <i onClick="deletePost(${index})" class="fas fa-trash-alt"></i>
       </span>
-    `;
-    postsDOM.appendChild(postDOM);
+      `;
+      postsDOM.appendChild(postDOM);
+    }
   });
 };
 
