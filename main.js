@@ -33,14 +33,15 @@ let acceptData = () => {
 };
 
 let showPosts = () => {
-  console.log("posts", posts);
-  const postsDOM = document.getElementById("posts");
-  postsDOM.innerHTML = ""; // Clear previous posts
-  posts.forEach((post, index) => {
-    if (post.user === currentUser.email) {
-      const postDOM = document.createElement("div");
-      postDOM.className = `post id-${index}`;
-      postDOM.innerHTML = `
+  if (currentUser) {
+    console.log("posts", posts);
+    const postsDOM = document.getElementById("posts");
+    postsDOM.innerHTML = ""; // Clear previous posts
+    posts.forEach((post, index) => {
+      if (post.user === currentUser.email) {
+        const postDOM = document.createElement("div");
+        postDOM.className = `post id-${index}`;
+        postDOM.innerHTML = `
       <p>${post.text}</p>
       <span class="options">
       <span>${timeAgo(post.createdAt)}</span>
@@ -48,9 +49,13 @@ let showPosts = () => {
       <i onClick="deletePost(${index})" class="fas fa-trash-alt"></i>
       </span>
       `;
-      postsDOM.appendChild(postDOM);
-    }
-  });
+        postsDOM.appendChild(postDOM);
+      }
+    });
+  } else {
+    alert("No user is logged in. Redirecting to login page...");
+    window.location.href = "index.html"; // Redirect if no user is logged in
+  }
 };
 
 let editPost = (index) => {
