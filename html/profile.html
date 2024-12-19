@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forgot My Password?</title>
+    <title>Sign Up</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            /* Purple background */
             margin: 0;
             padding: 0;
         }
@@ -17,7 +18,7 @@
             width: 50%;
             margin: 50px auto;
             background-color: #5457b6;
-            /* Purple background */
+            /* Yellow background */
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             border: 5px solid #c3c4ef;
@@ -37,7 +38,11 @@
             /* Yellow text */
         }
 
-        input[type="email"] {
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="password"] {
             width: 90%;
             padding: 10px;
             margin: 5px 0;
@@ -45,6 +50,10 @@
             border-radius: 5px;
             background-color: #fff;
             /* White background */
+        }
+
+        input[type="radio"] {
+            margin: 0 10px;
         }
 
         button {
@@ -55,14 +64,6 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-        }
-
-        label {
-            color: #fff;
-        }
-
-        p {
-            color: #fff;
         }
 
         button:hover {
@@ -79,33 +80,66 @@
         a:hover {
             text-decoration: underline;
         }
+
+        label {
+            color: #fff;
+        }
+
+        p {
+            color: #fff;
+        }
     </style>
+    <link rel="stylesheet" href="../css/navbar.css">
 </head>
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Note Taker</label>
+    <ul>
+        <li><a href="./home.html">Notes</a></li>
+        <li><a href="./profile.html">Profile</a></li>
+        <li><a class="active" href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+    </ul>
+</nav>
 
 <body>
     <center>
-        <form id="passwordRecoveryForm">
+        <form id="profieForm">
             <table>
                 <tr>
                     <th colspan="2">
-                        <h1>Password Recovery</h1>
+                        <h1>Profile Page</h1>
                     </th>
                 </tr>
                 <tr>
-                    <td><label for="mail">Email:</label></td>
-                    <td><input type="email" id="mail" placeholder="jison@gmail.com"></td>
+                    <th><label for="fullnam">Full Name:</label></th>
+                    <td><input type="text" id="fullnam" name="fullname" required value="" readonly></td>
                 </tr>
                 <tr>
-                    <td colspan="2" style="text-align: center;">
-                        <br><button class="button" type="submit">Submit</button><br><br>
-                        <p>Go Back <a href="login.html">Sign In</a></p>
+                    <th><label for="email">Email:</label></th>
+                    <td><input type="email" id="email" name="email" required placeholder="jison@gmail.com" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="Phone">Phone:</label></th>
+                    <td><input type="tel" id="Phone" name="phone" required readonly></td>
+                </tr>
+                <tr>
+                    <th><label for="gender">Gender:</label></th>
+                    <td style="color: #fff">
+                        <label id="genderVal"></label>
                     </td>
                 </tr>
             </table>
         </form>
-        <div id="message" style="text-align: center; margin-top: 10px;"></div>
+
     </center>
 </body>
-<script src="./scripts/password.js"></script>
+<script src="../scripts/profile.js"></script>
+<script src="../scripts/logout.js"></script>
 
 </html>

@@ -16,7 +16,7 @@ loginForm.addEventListener("submit", (e) => {
         localStorage.setItem("current_user", JSON.stringify(user));
 
         // Redirect to another page or perform any post-login action
-        window.location.href = "home.html"; // Example redirection
+        window.location.href = "../html/home.html"; // Example redirection
     } else {
         alert("Invalid email or password. Please try again.");
     }

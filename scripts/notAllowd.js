@@ -5,7 +5,7 @@ function check() {
         return;
     } else {
         alert("No user is logged in. Redirecting to login page...");
-        window.location.href = "index.html"; // Redirect if no user is logged in
+        window.location.href = "../index.html"; // Redirect if no user is logged in
     }
 }
 
